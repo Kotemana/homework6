@@ -47,6 +47,21 @@ namespace week7
                 faction.Report();
             }
 
+            Fighter bob=archers.Fighters.FirstOrDefault(x => x.Name == "Bob");
+            if (bob != null)
+            {
+                Console.WriteLine($"bob has {bob.Hp} hp");
+            }
+            else
+            {
+                Console.WriteLine("no bob found");
+            }
+
+            List<Fighter> tanks = archers.Fighters.Where(x => x.Hp > 70).ToList();
+            foreach (var bobby in tanks)
+            {
+                Console.WriteLine($"Tank {bobby.Name} has {bobby.Hp} hp");
+            }
         }
 
         private List<string> GenerateNames(string path)
