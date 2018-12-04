@@ -8,7 +8,7 @@ namespace week7
 {
     public class Battle
     {
-
+        //heh
         public void FirstStar()
         {
             List<Faction> factions = new List<Faction>();
